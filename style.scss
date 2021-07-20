@@ -1,0 +1,117 @@
+//referencias para responsividade
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+//referencias de cores
+$fundo: rgb(241, 248, 211);
+$operacao: #9BC53D;
+$calcFundo: #cac9ca;
+$operacaoMobile: #7d86ff;
+
+*{
+    margin: 0;
+    padding: 0;
+
+    body{
+        font-family: sans-serif;
+        background-color: $fundo;
+    }
+}
+
+.containerCalc__row{
+    font-size: 0;
+}
+
+.operation{
+    background-color: $operacao;
+}
+
+.number{
+    background-color: #fff;
+}
+
+.containerExterno{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerCalc{
+    height: 70%;
+    display: flex;
+    width: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__borda{
+        box-shadow: 6px 6px 20px black;
+        background-color: $calcFundo;
+        padding: 20px 10px 20px 10px;
+        border-radius: 2%;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.resultado{
+    height: 10vh;
+    width: 35vh;
+    font-size: 7vh;
+    border-radius: 5%;
+    text-indent: 0.5vh;
+    background-color: #fff;
+}
+
+button{
+    width: 8vh;
+    height: 8vh;
+    font-size: 7vh;
+    border: 1px solid $calcFundo;
+    border-radius: 15%;
+    margin: 0.5vh;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.containerInfo{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInfo p{
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+
+span{
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: $mobile){
+    .containerCalc{
+        height: 100%;
+        width: 100%;
+    }
+    .containerInfo{
+        display: none;
+    }
+    .operation{
+        background-color: $operacaoMobile;
+    }
+}
