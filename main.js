@@ -103,6 +103,3 @@ window.onload = function(){
     }
 
 }
-// TO-DO
-// erros nos resultados (quando termina com operação (e.g. 1*2*), ou quando há operações repetidas (e.g. 1++2))
-// limite de caracteres (aceita indefinidamente, mas só poderia aceitar 15)
